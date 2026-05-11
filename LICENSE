@@ -1,0 +1,22 @@
+Mnemonic-Recovery-CUDA License Protocol
+
+Copyright (c) 2024-2025 [8891689]. All Rights Reserved.
+中文版：授權協議
+個人使用：本程序對所有個人用戶免費。您可以自由地下載、安裝及運行本程序用於個人用途。
+禁止售賣：未經作者書面授權，嚴禁任何個人或實體將本程序（包括但不限於源代碼、編譯後的二進制文件及修改後的衍生版本）進行直接售賣、租賃、封裝分發或用於任何形式的收費服務。
+商業授權：若需將本程序集成至商業產品、在商業場所使用或進行二次分發銷售，必須事先聯繫作者並獲取正式的書面商業授權。
+安全審計：本程序公開源代碼之目的僅在於方便用戶進行安全性審核與學術交流。公開源代碼並不代表作者放棄上述任何版權權利，亦不代表授權他人進行非許可範圍內的使用。
+免責聲明：本程序僅供學習與技術研究使用。用戶因使用本程序導致的任何資產損失或法律責任，作者概不負責。
+作者聯繫方式：
+官方網站: https://www.8891689.com
+項目倉庫: https://github.com/8891689/Mnemonic-Recovery-CUDA
+
+English Version: License Protocol
+Personal Use: This software is free for all individual users. You are free to download, install, and run the program for personal, non-commercial purposes.
+Prohibition of Sale: Without explicit written authorization from the author, no individual or entity is permitted to sell, rent, lease, package, or redistribute this program (including but not limited to source code, compiled binaries, and modified derivatives), nor use it for any form of paid services.
+Commercial Licensing: Any integration of this program into commercial products, usage within commercial environments, or secondary distribution for sale requires a formal, written commercial license obtained from the author in advance.
+Security Auditing: The public availability of the source code is intended solely for security auditing and academic exchange. Public access to the source code does not constitute a waiver of any copyright or proprietary rights held by the author, nor does it grant permission for usage beyond the scope defined in this protocol.
+Disclaimer: This program is provided for educational and technical research purposes only. The author shall not be held liable for any financial loss or legal consequences resulting from the use of this software.
+Contact Information:
+Official Website: https://www.8891689.com
+Project Repository: https://gitlab.com/8891689/Mnemonic-Recovery-CUDA
