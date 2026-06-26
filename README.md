@@ -29,43 +29,43 @@ Developed in C and leveraging CUDA for high-performance computing, this software
 
 
 ```
+====================================================================
+               GPU Mnemonic & Passphrase Recovery Tool
+====================================================================
 [+] Version 2.1 Technical Support: https://www.8891689.com
+[+] Recovered? Please donate 1% to support us. Thanks!
 [+] Search Engine Initialization...
+[+] Usage: ./m [options] [mnemonic_words...] [target_address]
+
+[+] Options:
+            -h, --help               Show this help message.
+            -R                       Infinite Random Mode (Guess words randomly forever).
+            -g <device_id>           Select GPU device ID (default: 0).
+            -f <file>                Batch mode: Check against multiple addresses in a file.
+            -n <number>              Set GPU batch size (default: 40000, e.g., -n 50000).
+            -l <min-max>             Set Passphrase length range (e.g., -l 1-3).
+            -c <charset>             Set Passphrase charset. Built-in codes:
+                                     'd' = digits (0-9)
+                                     'u' = lowercase (a-z)
+                                     'i' = uppercase (A-Z)
+                                     's' = symbols (!@#$...)
+                                     'all' = All types (0-9a-zA-Z!@#$...)
+                                     * Can be combined (e.g., 'd,u' for lowercase + digits)
+            -12, -15, -18, -21, -24  Set the number of mnemonic words (default: -12).
+
+[+] Target Coin Types:
+            -bc1q                    BTC Native SegWit (Default)
+            -1                       BTC Legacy (P2PKH)
+            -3                       BTC P2SH
+            -eth                     Ethereum
+            -trx                     TRON
+            -doge, -ltc, -bch, -dash, -zec, -btg (Other supported coins)
+
+[+] Example 1: ./m -12 -eth word1 ? word3 ... 0xTargetAddress
+[+] Example 2: ./m "word1 ? word3 ..." -l 1-4 -c d,u -R -bc1q bc1qTarget...
+[+] Example 3: ./m -12 -eth -f hash160.all.txt...
 ====================================================================
- GPU Mnemonic & Passphrase Recovery Tool
-====================================================================
-Usage: ./m [options] [mnemonic_words...] [target_address]
 
-Options:
-  -h, --help               Show this help message.
-  -R                       Infinite Random Mode (Guess words randomly forever).
-  -f <file>                Batch mode: Check against multiple addresses in a file.
-  -n <number>              Set GPU batch size (default: 40000, e.g., -n 50000).
-  -l <min-max>             Set Passphrase length range (e.g., -l 1-3).
-  -c <charset>             Set Passphrase charset. Built-in codes:
-                             'd' = digits (0-9)
-                             'u' = lowercase (a-z)
-                             'i' = uppercase (A-Z)
-                             's' = symbols (!@#$...)
-                           'all' = All types (0-9a-zA-Z!@#$...)
-                           * Can be combined (e.g., 'd,u' for lowercase + digits)
-  -12, -15, -18, -21, -24  Set the number of mnemonic words (default: -12).
-
-Target Coin Types:
-  -bc1q                    BTC Native SegWit (Default)
-  -1                       BTC Legacy (P2PKH)
-  -3                       BTC P2SH
-  -eth                     Ethereum
-  -trx                     TRON
-  -doge, -ltc, -bch, -dash, -zec, -btg (Other supported coins)
-
-
-
-
-Example 1: ./m -12 -eth word1 ? word3 ... 0xTargetAddress
-Example 2: ./m "word1 ? word3 ..." -l 1-4 -c d,u -R -bc1q bc1qTarget...
-Example 3: ./m -12 -eth -f hash160.all.txt...
-====================================================================
 ```
 
 ##  Mnemonic Recovery (Missing Words)
@@ -77,6 +77,7 @@ Use `?` to represent unknown words in your 12-24 word seed phrase. -12 is the de
 ```
 ./m "echo earn ? table vehicle awful true shop hazard latin useful ?" -eth 0x822bf5eb121b2d35454a43cb748a6128e61b9db3
 [+] Version 2.1 Technical Support: https://www.8891689.com
+[+] Recovered? Please donate 1% to support us. Thanks!
 [+] Search Engine Initialization...
 [+] Loading complete!
 [+] Initial filter target hash: 0.50 MB
@@ -113,6 +114,7 @@ Search for forgotten BIP39 passphrases (extension words) using specific characte
 ```
 ./m "dumb change never lawn twist identify guilt ? swap ankle polar method" -l 1-3 -c d bc1qltdx4p04a8g85f7pcn8mu6npsh4hdpmwkak776
 [+] Version 2.1 Technical Support: https://www.8891689.com
+[+] Recovered? Please donate 1% to support us. Thanks!
 [+] Search Engine Initialization...
 [+] Loading complete!
 [+] Initial filter target hash: 0.50 MB
@@ -149,6 +151,7 @@ Compare a mnemonic phrase against a database of multiple addresses or Hash160 va
 ```
 ./m "echo earn pink table vehicle awful true shop hazard latin useful ?" -f add.all.txt
 [+] Version 2.1 Technical Support: https://www.8891689.com
+[+] Recovered? Please donate 1% to support us. Thanks!
 [+] Search Engine Initialization...
 [+] Loading data... 100%
 [+] Processing unique target hashes (Sorting and Deduplicating)...
@@ -180,6 +183,7 @@ Compare a mnemonic phrase against a database of multiple addresses or Hash160 va
 ```
 ./m "echo earn pink table vehicle awful true shop hazard latin useful ?" -trx -f pub.all.txt
 [+] Version 2.1 Technical Support: https://www.8891689.com
+[+] Recovered? Please donate 1% to support us. Thanks!
 [+] Search Engine Initialization...
 [+] Loading data... 100%
 [+] Processing unique target hashes (Sorting and Deduplicating)...
@@ -240,6 +244,8 @@ Set GPU batch size to 100,000 for faster processing
 ```
 ./m "mnemonic words..." -n 100000 -eth 0x...
 ```
+
+10. Add support for multiple graphics cards! -g <device_id> Select the GPU device ID (default: 0).
 
 # ⚙️ Dependencies
 
